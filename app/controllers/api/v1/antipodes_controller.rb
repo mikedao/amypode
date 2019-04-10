@@ -15,7 +15,7 @@ class Api::V1::AntipodesController < ApplicationController
 
   def valid_key?
     puts "incoming"
-    puts request.env["API_KEY"]
+    puts request.env.keys
     puts ENV['api_key']
     request.env["API_KEY"] == ENV['api_key']
   end
